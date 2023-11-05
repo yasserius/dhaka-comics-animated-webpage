@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        section {
+            height: 100vh;
+        }
+
+        .images{
+            width: 110%;
+            height: 110%;
+            position: relative;
+            z-index: -1;
+            top: -5%;
+            left: -5%;
+            overflow: hidden;
+        }
+
+        .image-wrapper{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /* bottom: 20%; */
+        }
+
+        .image-wrapper img{
+            width: 100%;
+            /* height: 100%; */
+            object-fit: contain;
+        }
+
+        #first {
+            left: -10%;
+            width: 120%;
+        }
+
+        #second {
+            top: -50%;
+        }
+
+        #logo {
+            top: -150%;
+            left: 10%;
+            width: 80%;
+            opacity: 0.5;
+        }
+
+        #mask path {
+            height: 100%;
+            width: 100%;
+            /* position: absolute; */
+            /* left: -5%; */
+            /* top: -5%; */
+            /* top: 0; */
+        }
+
+        #mask-path {
+            stroke-dasharray: 3900;
+            stroke-dashoffset: -3900;
+            animation: dash 5s cubic-bezier(0.075, 0.82, 0.165, 1) alternate-reverse infinite;
+        }
+        
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        section {
+            height: 100;
+            padding: 0;
+        }
+
+        #iraboti-section {
+            /* margin-top: 50vh; */
+            height: 200vh;
+        }
+
+        .iraboti-images {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: -1;
+            /* top: -40%; */
+            overflow: hidden;
+        }
+
+        /* #fourth {
+            width: 90%;
+            left: 5%;
+            top: -20%;
+        } */
+
+        .iraboti-images .image-wrapper img{
+            width: 100%;
+            /* height: 100%; */
+            object-fit: contain;
+        }
+
+        #iraboti {
+            bottom: -50%;
+        }
+
+        #iraboti video {
+            width: 100%;
+        }
+
+        #iraboti-logo {
+            top: 0;
+        }
+
+        .jum-images{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: -1;
+            /* top: -40%; */
+            overflow: hidden;
+        }
+
+        .jum-images .image-wrapper{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -80%;
+        }
+
+        /* #fourth {
+            width: 90%;
+            left: 5%;
+            top: -20%;
+        } */
+
+        .jum-images .image-wrapper img{
+            width: 100%;
+            /* height: 100%; */
+            object-fit: contain;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <section id="hero">
+        <div class="images">
+            <div class="image-wrapper" id="first">
+                <!-- lowest, background -->
+                <img src="static/Rishad-bg.png" />
+            </div>
+            <div class="image-wrapper" id="mask">
+                <!-- <img src="static/mask.svg" /> -->
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                viewBox="0 0 1920 1080" width="100%" height="100%" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0{fill:#00000000;stroke:#ffff78;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                    </style>
+                    <path class="st0" id="mask-path" d="M226,114.5h1413.71c33.57,0,60.79,27.22,60.79,60.79v645.03c0,16.12-6.4,31.58-17.8,42.98l-84.84,84.84
+                        c-11.73,11.73-27.74,18.15-44.32,17.79L222.96,936.8c-33.05-0.72-59.46-27.72-59.46-60.78V663.68c0-16.12,6.4-31.58,17.8-42.98
+                        l25.44-25.44c11.37-11.37,17.77-26.78,17.8-42.85l0.95-437.9"/>
+                </svg>
+            </div>
+            <div class="image-wrapper" id="logo">
+                <img src="static/Rishad-top-2 logo.png" />
+            </div>
+            <div class="image-wrapper" id="second">
+                <img src="static/Rishad-top-1.png" />
+            </div>
+          </div>
+    </section>
+
+    <section id="iraboti-section">
+        <div class="iraboti-images">
+            <div class="image-wrapper" id="red-bg">
+                <img src="static/iraboti_layer-bg-red.png"></img>
+            </div>
+            <div class="image-wrapper" id="iraboti-logo">
+                <img src="static/iraboti_layer-logo.png"></img>
+            </div>
+            <div class="image-wrapper" id="iraboti">
+                <video autoplay muted loop src="static/iraboti.webm"></video>
+            </div>
+          </div>
+    </section>
+
+    <section id="jum-section">
+        <div class="jum-images">
+            <div class="image-wrapper" id="jum-first">
+                <!-- lowest, background -->
+                <img src="static/jum-layer-bg.png" />
+            </div>
+            <div class="image-wrapper" id="jum-second">
+                <img src="static/jum-layer-1-face.png" />
+            </div>
+            <div class="image-wrapper" id="jum-third">
+                <img src="static/jum-layer-2-hand.png" />
+            </div>
+            <div class="image-wrapper" id="jum-fourth">
+                <img src="static/jum-layer-3-boy.png" />
+            </div>
+          </div>
+    </section>
+
+    <section></section>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        var movementStrength = 25;
+        var height = movementStrength / $(window).height();
+        var width = movementStrength / $(window).width();
+
+        $("#hero").mousemove(function(e) {
+            var pageX = e.pageX - ($(window).width() / 2);
+            var pageY = e.pageY - ($(window).height() / 2);
+            var newvalueX = height * pageX * -3;
+            var newvalueY = width * pageY * -3;
+            // console.log(newvalueX)
+            $('#first img').css("transform", `translate(${newvalueX}px, ${newvalueY}px)`);
+
+            let x = ($(window).width() / 2 - e.pageX) / 100;
+            let y = ($(window).height() / 2 - e.pageY) / 100;
+            $('#second').css("transform", `translate(${x}px, ${y}px)`);
+            // $('#second').css("transform", "rotateY(" + x + "deg) rotateX(" + y + "deg)");
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const tl = gsap.timeline({scrollTrigger:{
+                    trigger:"#jum-section",
+                    scrub: 1,
+                    pin: true,
+                    anticipatePin: true,
+                    start: "top top",
+                    end: "+=300%",
+                    // markers: true
+            }});
+
+            let max_movement = 200
+            let duration_val = 6
+            
+            tl
+            .to('#jum-fourth', {
+                y: -max_movement * 1,
+                duration: duration_val
+            }, `-=${duration_val}`)
+            .to('#jum-third',  {
+                y: -max_movement * 0.8,
+                duration: duration_val
+            }, `-=${duration_val}`)
+            .to('#jum-second',  {
+                y: -max_movement * 0.7,
+                duration: duration_val
+            }, `-=${duration_val}`)
+            .to('#jum-first', {
+                y: -max_movement * 0.5,
+                duration: duration_val
+            }, `-=${duration_val}`)
+        })
+    </script>
+</body>
+</html>
